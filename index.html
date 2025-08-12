@@ -16,75 +16,45 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      transition: background-color 0.4s ease, color 0.4s ease;
-    }
+    html { scroll-behavior: smooth; }
+    body { transition: background-color 0.4s ease, color 0.4s ease; }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .animate-fadeIn {
-      animation: fadeIn 0.8s ease forwards;
-      opacity: 0;
-    }
+    .animate-fadeIn { animation: fadeIn 0.8s ease forwards; opacity: 0; }
     .delay-200 { animation-delay: 0.2s; }
     .delay-400 { animation-delay: 0.4s; }
     .delay-600 { animation-delay: 0.6s; }
     #progressBar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 4px;
-      background: #3b82f6;
-      width: 0%;
-      z-index: 9999;
+      position: fixed; top: 0; left: 0; height: 4px;
+      background: #3b82f6; width: 0%; z-index: 9999;
       transition: width 0.2s ease;
     }
     button:focus, a:focus, input:focus, textarea:focus {
-      outline: 2px solid #3b82f6;
-      outline-offset: 2px;
+      outline: 2px solid #3b82f6; outline-offset: 2px;
     }
     input, textarea {
       transition: border-color 0.3s ease, background-color 0.3s ease;
     }
     input:hover, textarea:hover, input:focus, textarea:focus {
-      background-color: #1f2937;
-      border-color: #3b82f6;
+      background-color: #1f2937; border-color: #3b82f6;
     }
     button:hover, button:focus {
-      transform: scale(1.05);
-      transition: transform 0.15s ease;
+      transform: scale(1.05); transition: transform 0.15s ease;
     }
-    button:active {
-      transform: scale(0.95);
-      transition: transform 0.1s ease;
-    }
+    button:active { transform: scale(0.95); transition: transform 0.1s ease; }
     #backToTop {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      background-color: #3b82f6;
-      color: white;
-      padding: 0.6rem 1rem;
-      border-radius: 9999px;
-      cursor: pointer;
-      font-weight: 700;
+      position: fixed; bottom: 2rem; right: 2rem;
+      background-color: #3b82f6; color: white;
+      padding: 0.6rem 1rem; border-radius: 9999px;
+      cursor: pointer; font-weight: 700;
       box-shadow: 0 4px 6px rgba(59,130,246,0.5);
-      display: none;
-      z-index: 10000;
+      display: none; z-index: 10000;
       transition: background-color 0.3s ease;
     }
-    #backToTop:hover {
-      background-color: #2563eb;
-    }
-    .social-icon {
-      width: 24px;
-      height: 24px;
-      fill: currentColor;
-    }
+    #backToTop:hover { background-color: #2563eb; }
+    .social-icon { width: 24px; height: 24px; fill: currentColor; }
   </style>
 </head>
 <body class="bg-gray-900 text-white font-sans relative">
@@ -130,23 +100,29 @@
 
     <section id="projects" class="py-16 px-6 bg-gray-800 fade-on-scroll">
       <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <div class="bg-gray-700 p-6 rounded-lg">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300">
           <h3 class="text-lg font-semibold mb-2">Portfolio Website</h3>
-          <p class="text-gray-400 mb-4">A personal portfolio to showcase skills, experience, and projects.</p>
+          <p class="text-gray-400 text-sm">A personal portfolio to showcase skills, experience, and projects.</p>
         </div>
 
-        <a href="https://your-jacknpoy-game-link.com" target="_blank" rel="noopener noreferrer" class="block bg-gray-700 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+        <a href="https://your-jacknpoy-game-link.com" target="_blank" rel="noopener noreferrer" class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300 block">
           <h3 class="text-lg font-semibold mb-2">Jack N’ Poy Game</h3>
-          <p class="text-gray-400 mb-4">A fun rock-paper-scissors game made with HTML, CSS, and JavaScript.</p>
-          <span class="inline-block text-blue-400 font-medium">Play Now →</span>
+          <p class="text-gray-400 text-sm">A fun rock-paper-scissors game made with HTML, CSS, and JavaScript.</p>
         </a>
 
-        <a href="https://your-inbetween-game-link.com" target="_blank" rel="noopener noreferrer" class="block bg-gray-700 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+        <a href="https://your-inbetween-game-link.com" target="_blank" rel="noopener noreferrer" class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300 block">
           <h3 class="text-lg font-semibold mb-2">In Between</h3>
-          <p class="text-gray-400 mb-4">A number-guessing challenge game built for interactive play.</p>
-          <span class="inline-block text-blue-400 font-medium">Try It →</span>
+          <p class="text-gray-400 text-sm">A number-guessing challenge game built for interactive play.</p>
+        </a>
+
+        <!-- New More Projects Card (added) -->
+        <a href="https://yourprojectslink.com" target="_blank" rel="noopener noreferrer" class="bg-gray-700 p-4 rounded-lg flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
+          <h3 class="text-lg font-semibold mb-2 flex items-center">
+            More Projects <span class="ml-2">→</span>
+          </h3>
+          <p class="text-gray-400 text-sm">Click to explore more of my work.</p>
         </a>
 
       </div>
@@ -195,11 +171,7 @@
       document.getElementById('progressBar').style.width = scrollPercent + '%';
 
       const backToTop = document.getElementById('backToTop');
-      if(scrollTop > 300) {
-        backToTop.style.display = 'block';
-      } else {
-        backToTop.style.display = 'none';
-      }
+      backToTop.style.display = scrollTop > 300 ? 'block' : 'none';
     });
 
     document.getElementById('backToTop').addEventListener('click', () => {
