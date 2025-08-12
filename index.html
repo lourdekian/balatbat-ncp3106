@@ -55,6 +55,18 @@
     }
     #backToTop:hover { background-color: #2563eb; }
     .social-icon { width: 24px; height: 24px; fill: currentColor; }
+  .typed-cursor {
+      display: inline-block;
+      color: white;
+      opacity: 1;
+      animation: typedBlink 0.8s steps(2, start) infinite;
+      margin-left: 6px;
+    }
+    @keyframes typedBlink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-white font-sans relative">
@@ -107,14 +119,20 @@
           <p class="text-gray-400 text-sm">A personal portfolio to showcase skills, experience, and projects.</p>
         </div>
 
-        <a href="https://your-jacknpoy-game-link.com" target="_blank" rel="noopener noreferrer" class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300 block">
+        <a href="https://your-jacknpoy-game-link.com" target="_blank" rel="noopener noreferrer" class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300 block text-center">
           <h3 class="text-lg font-semibold mb-2">Jack N’ Poy Game</h3>
-          <p class="text-gray-400 text-sm">A fun rock-paper-scissors game made with HTML, CSS, and JavaScript.</p>
+          <p class="text-gray-400 text-sm mb-3">A fun rock-paper-scissors game made with HTML, CSS, and JavaScript.</p>
+          <span class="inline-flex items-center text-blue-400 font-semibold hover:text-blue-300 transition">
+            Play Now <span class="ml-2">→</span>
+          </span>
         </a>
 
-        <a href="https://your-inbetween-game-link.com" target="_blank" rel="noopener noreferrer" class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300 block">
+        <a href="https://your-inbetween-game-link.com" target="_blank" rel="noopener noreferrer" aria-label="Play In Between game" class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300 block text-center">
           <h3 class="text-lg font-semibold mb-2">In Between</h3>
-          <p class="text-gray-400 text-sm">A number-guessing challenge game built for interactive play.</p>
+          <p class="text-gray-400 text-sm mb-3">A number-guessing challenge game built for interactive play.</p>
+          <span class="inline-flex items-center text-blue-400 font-semibold hover:text-blue-300 transition">
+            Play Now <span class="ml-2">→</span>
+          </span>
         </a>
 
         <!-- New More Projects Card (added) -->
@@ -160,7 +178,7 @@
     new Typed('#typed-name', {
       strings: ['Kobe Christian Balatbat'],
       typeSpeed: 80,
-      showCursor: false,
+      showCursor: true, cursorChar: '▌',
       loop: false
     });
 
