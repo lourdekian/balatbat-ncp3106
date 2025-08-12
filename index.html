@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kobe Christian Balatbat | Portfolio</title>
+  <meta name="description" content="Portfolio of Kobe Christian Balatbat, aspiring Computer Engineer passionate about coding and technology." />
+  <meta name="keywords" content="Kobe Christian Balatbat, Computer Engineer, Portfolio, Developer, Projects, Coding" />
+  <meta property="og:title" content="Kobe Christian Balatbat | Portfolio" />
+  <meta property="og:description" content="Portfolio of Kobe Christian Balatbat, aspiring Computer Engineer passionate about coding and technology." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourportfolio.com" />
+  <meta property="og:image" content="https://yourportfolio.com/me.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease forwards;
+      opacity: 0;
+    }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-600 { animation-delay: 0.6s; }
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: #3b82f6;
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.2s ease;
+    }
+    button:focus, a:focus, input:focus, textarea:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+    }
+    input, textarea {
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+    input:hover, textarea:hover, input:focus, textarea:focus {
+      background-color: #1f2937;
+      border-color: #3b82f6;
+    }
+    button:hover, button:focus {
+      transform: scale(1.05);
+      transition: transform 0.15s ease;
+    }
+    button:active {
+      transform: scale(0.95);
+      transition: transform 0.1s ease;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #3b82f6;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 4px 6px rgba(59,130,246,0.5);
+      display: none;
+      z-index: 10000;
+      transition: background-color 0.3s ease;
+    }
+    #backToTop:hover {
+      background-color: #2563eb;
+    }
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans relative">
+
+  <div id="progressBar"></div>
+
+  <button id="themeToggle" aria-label="Toggle Dark/Light Mode" class="fixed top-4 right-4 bg-gray-700 hover:bg-gray-600 p-3 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 z-50">
+    🌙
+  </button>
+
+  <main>
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4" id="home">
+      <img src="me.jpg" alt="Portrait of Kobe Christian Balatbat" class="w-40 h-40 rounded-full object-cover border-4 border-white mb-6 animate-fadeIn" />
+      <h1 class="text-5xl font-bold mb-4 animate-fadeIn delay-200">
+        Hi, I'm <span id="typed-name" class="text-blue-400"></span>
+      </h1>
+      <p class="text-lg max-w-xl mb-6 animate-fadeIn delay-400">
+        An aspiring <span class="text-yellow-300">Computer Engineer</span> at the University of the East.
+        Passionate about technology, coding, and building innovative solutions.
+      </p>
+      <div class="flex gap-4 animate-fadeIn delay-600">
+        <a href="#contact" class="bg-gray-700 hover:bg-gray-600 active:scale-95 px-5 py-2 rounded-lg transition transform duration-150">Contact Me</a>
+        <a href="/resume.pdf" download class="bg-yellow-400 text-gray-900 font-semibold px-5 py-2 rounded-lg hover:bg-yellow-300 transition transform duration-150">Download Resume</a>
+      </div>
+    </section>
+
+    <section id="about" class="py-16 px-6 bg-gray-800 fade-on-scroll max-w-4xl mx-auto rounded-lg shadow-lg my-12">
+      <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+      <p class="text-gray-300 text-center leading-relaxed text-lg">
+        I play Valorant, CS2, basketball, and enjoy cooking. I also like exploring new hobbies, spending time with friends, and challenging myself to learn new skills. Balancing study and fun helps me stay motivated and creative. I'm always up for collaborating on interesting projects and growing as a person and developer.
+      </p>
+    </section>
+
+    <section id="skills" class="py-16 px-6 bg-gray-800 fade-on-scroll">
+      <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300">HTML & CSS</div>
+        <div class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300">JavaScript</div>
+        <div class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300">Python</div>
+        <div class="bg-gray-700 p-4 rounded-lg hover:scale-105 transition-transform duration-300">Arduino</div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-16 px-6 bg-gray-800 fade-on-scroll">
+      <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-gray-700 p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-2">Portfolio Website</h3>
+          <p class="text-gray-400 mb-4">A personal portfolio to showcase skills, experience, and projects.</p>
+        </div>
+
+        <a href="https://your-jacknpoy-game-link.com" target="_blank" rel="noopener noreferrer" class="block bg-gray-700 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+          <h3 class="text-lg font-semibold mb-2">Jack N’ Poy Game</h3>
+          <p class="text-gray-400 mb-4">A fun rock-paper-scissors game made with HTML, CSS, and JavaScript.</p>
+          <span class="inline-block text-blue-400 font-medium">Play Now →</span>
+        </a>
+
+        <a href="https://your-inbetween-game-link.com" target="_blank" rel="noopener noreferrer" class="block bg-gray-700 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1">
+          <h3 class="text-lg font-semibold mb-2">In Between</h3>
+          <p class="text-gray-400 mb-4">A number-guessing challenge game built for interactive play.</p>
+          <span class="inline-block text-blue-400 font-medium">Try It →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 px-6 fade-on-scroll">
+      <h2 class="text-3xl font-bold mb-6 text-center">Contact Me</h2>
+      <form action="https://formspree.io/f/mayvqwza" method="POST" class="max-w-lg mx-auto space-y-4">
+        <input type="text" name="name" aria-label="Your Name" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700" required />
+        <input type="email" name="_replyto" aria-label="Your Email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700" required />
+        <textarea name="message" aria-label="Your Message" placeholder="Your Message" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700" rows="4" required></textarea>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 w-full p-3 rounded-lg transition transform duration-150">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="py-6 text-center bg-gray-800">
+    <p class="text-gray-400">&copy; 2025 Kobe Christian Balatbat. All rights reserved.</p>
+    <div class="mt-4 flex justify-center space-x-6">
+      <a href="https://github.com/lourdekian" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-400 hover:text-white transition">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.016c0 4.426 2.865 8.185 6.839 9.515.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.07 1.532 1.033 1.532 1.033.892 1.528 2.341 1.087 2.91.831.092-.647.35-1.086.636-1.337-2.22-.255-4.555-1.113-4.555-4.951 0-1.093.39-1.987 1.03-2.687-.103-.254-.446-1.277.098-2.66 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.908-1.294 2.746-1.025 2.746-1.025.546 1.383.202 2.406.1 2.66.64.7 1.028 1.594 1.028 2.687 0 3.848-2.339 4.693-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.75 0 .269.18.58.688.481A10.02 10.02 0 0022 12.015C22 6.484 17.523 2 12 2z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/LourdeKian" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-gray-400 hover:text-white transition">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.351C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.676V1.325C24 .6 23.4 0 22.675 0z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/lourdekian" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-400 hover:text-white transition">
+        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5C19.55 2 22 4.45 22 7.75v8.5c0 3.3-2.45 5.75-5.75 5.75h-8.5C4.45 22 2 19.55 2 16.25v-8.5C2 4.45 4.45 2 7.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5a4.25 4.25 0 004.25 4.25h8.5a4.25 4.25 0 004.25-4.25v-8.5a4.25 4.25 0 00-4.25-4.25h-8.5zm8.75 2a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to Top">↑ Top</button>
+
+  <script>
+    new Typed('#typed-name', {
+      strings: ['Kobe Christian Balatbat'],
+      typeSpeed: 80,
+      showCursor: false,
+      loop: false
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      document.getElementById('progressBar').style.width = scrollPercent + '%';
+
+      const backToTop = document.getElementById('backToTop');
+      if(scrollTop > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+
+    document.getElementById('backToTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const faders = document.querySelectorAll('.fade-on-scroll');
+    const options = { threshold: 0.2 };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeIn 0.8s ease forwards';
+          entry.target.style.opacity = 1;
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+    faders.forEach(fader => {
+      fader.style.opacity = 0;
+      fader.style.transform = 'translateY(20px)';
+      observer.observe(fader);
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const lightModeIcon = '🌞';
+    const darkModeIcon = '🌙';
+
+    if(localStorage.getItem('theme') === 'light') {
+      body.classList.remove('bg-gray-900', 'text-white');
+      body.classList.add('bg-white', 'text-gray-900');
+      themeToggle.textContent = lightModeIcon;
+    } else {
+      themeToggle.textContent = darkModeIcon;
+    }
+
+    themeToggle.addEventListener('click', () => {
+      if(body.classList.contains('bg-gray-900')) {
+        body.classList.remove('bg-gray-900', 'text-white');
+        body.classList.add('bg-white', 'text-gray-900');
+        themeToggle.textContent = lightModeIcon;
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.add('bg-gray-900', 'text-white');
+        body.classList.remove('bg-white', 'text-gray-900');
+        themeToggle.textContent = darkModeIcon;
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+</body>
+</html>
