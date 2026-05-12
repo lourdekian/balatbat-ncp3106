@@ -182,6 +182,20 @@
     }
     .btn-secondary:hover { border-color: var(--gold); box-shadow: 0 8px 30px rgba(251,191,36,0.2); }
 
+    .btn-olj {
+      background: var(--surface); color: var(--em3);
+      border: 1px solid rgba(34,197,94,0.3);
+      box-shadow: 0 4px 20px rgba(34,197,94,0.08);
+    }
+    .btn-olj:hover { border-color: var(--em3); box-shadow: 0 8px 30px rgba(34,197,94,0.2); }
+
+    .btn-jobstreet {
+      background: var(--surface); color: #60a5fa;
+      border: 1px solid rgba(96,165,250,0.3);
+      box-shadow: 0 4px 20px rgba(96,165,250,0.08);
+    }
+    .btn-jobstreet:hover { border-color: #60a5fa; box-shadow: 0 8px 30px rgba(96,165,250,0.2); }
+
     section { position: relative; z-index: 1; }
 
     .section-inner { max-width: 900px; margin: 0 auto; padding: 6rem 1.5rem; }
@@ -203,7 +217,6 @@
       margin-bottom: 3rem;
     }
 
-    /* ── SERVICES ── */
     .services-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;
     }
@@ -236,13 +249,9 @@
       color: var(--em3);
     }
 
-    /* ── EXPERIENCE SECTION ── */
     #experience { background: var(--bg2); border-top: 1px solid var(--border); }
 
-    .timeline {
-      position: relative;
-      padding-left: 2rem;
-    }
+    .timeline { position: relative; padding-left: 2rem; }
 
     .timeline::before {
       content: '';
@@ -253,10 +262,7 @@
       border-radius: 2px;
     }
 
-    .timeline-item {
-      position: relative;
-      margin-bottom: 2rem;
-    }
+    .timeline-item { position: relative; margin-bottom: 2rem; }
     .timeline-item:last-child { margin-bottom: 0; }
 
     .timeline-dot {
@@ -282,183 +288,83 @@
     }
 
     .exp-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.35rem;
+      display: flex; align-items: flex-start;
+      justify-content: space-between; gap: 1rem;
+      flex-wrap: wrap; margin-bottom: 0.35rem;
     }
 
-    .exp-title {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.3rem;
-      color: var(--white);
-    }
+    .exp-title { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--white); }
 
     .exp-duration {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
+      display: inline-flex; align-items: center; gap: 0.4rem;
       padding: 0.3rem 0.85rem;
-      background: rgba(34,197,94,0.1);
-      border: 1px solid rgba(34,197,94,0.25);
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--em3);
-      white-space: nowrap;
-      letter-spacing: 0.03em;
+      background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25);
+      border-radius: 9999px; font-size: 0.75rem; font-weight: 600;
+      color: var(--em3); white-space: nowrap; letter-spacing: 0.03em;
     }
 
-    .exp-company {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 1.25rem;
-      font-weight: 500;
-    }
+    .exp-company { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.25rem; font-weight: 500; }
 
-    .exp-bullets {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1.5rem;
-    }
+    .exp-bullets { list-style: none; padding: 0; margin-bottom: 1.5rem; }
 
     .exp-bullets li {
-      font-size: 0.9rem;
-      color: var(--text);
-      line-height: 1.75;
-      opacity: 0.85;
-      padding-left: 1.25rem;
-      position: relative;
-      margin-bottom: 0.5rem;
+      font-size: 0.9rem; color: var(--text); line-height: 1.75;
+      opacity: 0.85; padding-left: 1.25rem; position: relative; margin-bottom: 0.5rem;
     }
-
     .exp-bullets li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--em);
-      font-size: 0.75rem;
-      top: 0.2rem;
+      content: '▸'; position: absolute; left: 0;
+      color: var(--em); font-size: 0.75rem; top: 0.2rem;
     }
 
-    .exp-tools {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
+    .exp-tools { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
     .exp-tool {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
+      display: inline-flex; align-items: center; gap: 0.35rem;
       padding: 0.35rem 0.85rem;
-      background: rgba(251,191,36,0.07);
-      border: 1px solid rgba(251,191,36,0.2);
-      border-radius: 9999px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 0.03em;
+      background: rgba(251,191,36,0.07); border: 1px solid rgba(251,191,36,0.2);
+      border-radius: 9999px; font-size: 0.78rem; font-weight: 600;
+      color: var(--gold); letter-spacing: 0.03em;
     }
 
-    /* ── EDUCATION ── */
     #education { border-top: 1px solid var(--border); }
 
-    .edu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
+    .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
 
     .edu-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.75rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.75rem;
       transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
     }
     .edu-card:hover {
-      border-color: var(--em2);
-      transform: translateY(-4px);
+      border-color: var(--em2); transform: translateY(-4px);
       box-shadow: 0 12px 40px rgba(34,197,94,0.1);
     }
 
-    .edu-degree {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.05rem;
-      color: var(--white);
-      margin-bottom: 0.4rem;
-    }
+    .edu-degree { font-family: 'DM Serif Display', serif; font-size: 1.05rem; color: var(--white); margin-bottom: 0.4rem; }
+    .edu-school { font-size: 0.85rem; color: var(--em3); font-weight: 600; margin-bottom: 0.35rem; }
+    .edu-year { font-size: 0.8rem; color: var(--muted); }
 
-    .edu-school {
-      font-size: 0.85rem;
-      color: var(--em3);
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .edu-year {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    /* ── CERTIFICATIONS ── */
     #certifications { background: var(--bg2); border-top: 1px solid var(--border); }
 
-    .cert-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
+    .cert-list { display: flex; flex-direction: column; gap: 0.75rem; }
 
     .cert-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
-      transition: border-color 0.2s;
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1rem 1.25rem; transition: border-color 0.2s;
     }
     .cert-item:hover { border-color: var(--em2); }
 
-    .cert-icon {
-      font-size: 1.25rem; flex-shrink: 0;
-    }
-
-    .cert-name {
-      font-size: 0.9rem;
-      color: var(--text);
-      font-weight: 500;
-    }
-
+    .cert-icon { font-size: 1.25rem; flex-shrink: 0; }
+    .cert-name { font-size: 0.9rem; color: var(--text); font-weight: 500; }
     .cert-year {
-      margin-left: auto;
-      padding: 0.25rem 0.75rem;
-      background: rgba(34,197,94,0.08);
-      border: 1px solid rgba(34,197,94,0.2);
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--em3);
-      white-space: nowrap;
+      margin-left: auto; padding: 0.25rem 0.75rem;
+      background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2);
+      border-radius: 9999px; font-size: 0.75rem; font-weight: 600;
+      color: var(--em3); white-space: nowrap;
     }
 
-    /* ── CONTACT ── */
     #contact .section-inner { grid-template-columns: 1fr; max-width: 600px; }
-
-    .contact-info h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.5rem; color: var(--white); margin-bottom: 0.75rem;
-    }
-
-    .contact-info p {
-      color: var(--muted); font-size: 0.9rem;
-      line-height: 1.7; margin-bottom: 2rem;
-    }
 
     .contact-detail {
       display: flex; align-items: center; gap: 0.75rem;
@@ -469,6 +375,14 @@
       background: var(--surface); border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
       font-size: 0.9rem; flex-shrink: 0;
+    }
+
+    .contact-group-label {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--muted);
+      margin: 1.75rem 0 0.9rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
     }
 
     footer {
@@ -508,6 +422,8 @@
     @media (max-width: 680px) {
       .nav-links { display: none; }
       .exp-header { flex-direction: column; gap: 0.5rem; }
+      .cta-row { gap: 0.75rem; }
+      .btn { padding: 0.7rem 1.25rem; font-size: 0.875rem; }
     }
   </style>
 </head>
@@ -552,7 +468,18 @@
       </p>
 
       <div class="cta-row">
-        <a href="https://www.linkedin.com/in/kobe-christian-balatbat-b3b80b406/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn ↗</a>
+        <a href="https://www.linkedin.com/in/kobe-christian-balatbat-b3b80b406/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn ↗
+        </a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/4976526" target="_blank" rel="noopener noreferrer" class="btn btn-olj">
+          <span style="font-weight:800;font-size:0.8em;letter-spacing:-0.02em;">OLJ</span>
+          OnlineJobs.ph ↗
+        </a>
+        <a href="https://ph.jobstreet.com/profiles/kobechristian-balatbat-6kPTY9S5jl" target="_blank" rel="noopener noreferrer" class="btn btn-jobstreet">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;"><path d="M20 6h-2.18c.07-.33.18-.64.18-1 0-2.21-1.79-4-4-4s-4 1.79-4 4c0 .36.11.67.18 1H8c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h12c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6-3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm6 17H8V8h2v2h8V8h2v12z"/></svg>
+          JobStreet ↗
+        </a>
       </div>
     </section>
 
@@ -687,7 +614,7 @@
     <section id="certifications">
       <div class="section-inner">
         <p class="section-label reveal">Credentials</p>
-        <h2 class="section-title reveal">Certifications & Seminars</h2>
+        <h2 class="section-title reveal">Certifications &amp; Seminars</h2>
         <div class="divider reveal"></div>
 
         <div class="cert-list">
@@ -729,6 +656,9 @@
           <div class="divider reveal"></div>
           <p class="reveal" style="margin-bottom: 2rem;">Ready to streamline your workflow? Reach out through any of the channels below and I'll get back to you as soon as possible.</p>
 
+          <!-- Professional Profiles -->
+          <div class="contact-group-label reveal">Professional Profiles</div>
+
           <a href="https://www.linkedin.com/in/kobe-christian-balatbat-b3b80b406/" target="_blank" rel="noopener noreferrer" class="contact-detail reveal" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
             <div class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:1rem;height:1rem;color:var(--em3)"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -738,6 +668,25 @@
               <div style="font-size:0.9rem;color:var(--em3);">kobe-christian-balatbat-b3b80b406</div>
             </div>
           </a>
+
+          <a href="https://www.onlinejobs.ph/jobseekers/info/4976526" target="_blank" rel="noopener noreferrer" class="contact-detail reveal" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
+            <div class="icon" style="font-size:0.65rem;font-weight:800;color:var(--em3);letter-spacing:-0.01em;">OLJ</div>
+            <div>
+              <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.15rem;">OnlineJobs.ph</div>
+              <div style="font-size:0.9rem;color:var(--em3);">onlinejobs.ph/jobseekers/info/4976526</div>
+            </div>
+          </a>
+
+          <a href="https://ph.jobstreet.com/profiles/kobechristian-balatbat-6kPTY9S5jl" target="_blank" rel="noopener noreferrer" class="contact-detail reveal" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
+            <div class="icon" style="font-size:0.65rem;font-weight:800;color:var(--gold);letter-spacing:-0.01em;">JS</div>
+            <div>
+              <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.15rem;">JobStreet</div>
+              <div style="font-size:0.9rem;color:var(--em3);">ph.jobstreet.com/profiles/kobechristian-balatbat</div>
+            </div>
+          </a>
+
+          <!-- Direct Contact -->
+          <div class="contact-group-label reveal">Direct Contact</div>
 
           <a href="tel:09214055369" class="contact-detail reveal" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
             <div class="icon">📱</div>
@@ -762,6 +711,7 @@
               <div style="font-size:0.9rem;color:var(--em3);">kobebalatbat.va@gmail.com</div>
             </div>
           </a>
+
         </div>
       </div>
     </section>
