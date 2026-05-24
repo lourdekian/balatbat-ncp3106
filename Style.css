@@ -1,0 +1,42 @@
+html { scroll-behavior: smooth; }
+body { transition: background-color 0.4s ease, color 0.4s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 0.8s ease forwards; opacity: 0; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+
+button:focus, a:focus, input:focus, textarea:focus {
+  outline: 2px solid #22c55e; outline-offset: 2px;
+}
+
+input, textarea {
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+input:hover, textarea:hover, input:focus, textarea:focus {
+  background-color: #162018; border-color: #22c55e;
+}
+
+button:hover, button:focus {
+  transform: scale(1.05); transition: transform 0.15s ease;
+}
+button:active { transform: scale(0.95); transition: transform 0.1s ease; }
+
+.social-icon { width: 24px; height: 24px; fill: currentColor; }
+
+.typed-cursor {
+  display: inline-block;
+  color: #4ade80;
+  opacity: 1;
+  animation: typedBlink 0.8s steps(2, start) infinite;
+  margin-left: 6px;
+}
+@keyframes typedBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
