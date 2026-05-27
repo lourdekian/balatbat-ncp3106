@@ -842,7 +842,7 @@
         var phTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Manila' }));
         var hour = phTime.getHours();
         var day = phTime.getDay();
-        var isWorkHours = hour >= 9 && hour < 18 && day >= 1 && day <= 5;
+        var isWorkHours = hour >= 6 && hour < 22 && day >= 1 && day <= 5;
 
         if (isWorkHours) {
           statusDot.classList.remove('offline');
