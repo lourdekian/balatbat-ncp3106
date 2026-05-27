@@ -41,6 +41,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
@@ -57,6 +58,7 @@
     <a href="#experience" class="mobile-link">Experience</a>
     <a href="#services" class="mobile-link">Services</a>
     <a href="#certifications" class="mobile-link">Certifications</a>
+    <a href="#projects" class="mobile-link">Projects</a>
     <a href="#contact" class="mobile-link">Contact</a>
   </div>
 
@@ -842,7 +844,7 @@
         var phTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Manila' }));
         var hour = phTime.getHours();
         var day = phTime.getDay();
-        var isWorkHours = hour >= 6 && hour < 22 && day >= 1 && day <= 5;
+        var isWorkHours = hour >= 9 && hour < 18 && day >= 1 && day <= 5;
 
         if (isWorkHours) {
           statusDot.classList.remove('offline');
@@ -894,6 +896,36 @@
     backToTop.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    /* ══════════════════════
+       ACTIVE NAV HIGHLIGHT — IntersectionObserver
+       ══════════════════════ */
+    (function () {
+      var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+      var sectionIds = Array.prototype.map.call(navLinks, function (a) {
+        return a.getAttribute('href').slice(1);
+      });
+
+      function setActive(id) {
+        navLinks.forEach(function (a) {
+          var isActive = a.getAttribute('href') === '#' + id;
+          a.classList.toggle('active', isActive);
+        });
+      }
+
+      var sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '-10% 0px -60% 0px' });
+
+      sectionIds.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) sectionObserver.observe(el);
+      });
+    })();
 
     /* ══════════════════════
        REVEAL — IntersectionObserver with staggered rAF
