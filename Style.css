@@ -75,6 +75,22 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--em3); }
+.nav-links a.active {
+  color: var(--em3);
+  position: relative;
+}
+.nav-links a.active::after {
+  content: '';
+  position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--em2), var(--em3));
+  border-radius: 2px;
+  animation: navUnderlineIn 0.25s ease both;
+}
+@keyframes navUnderlineIn {
+  from { transform: scaleX(0); opacity: 0; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
 
 #themeToggle {
   background: var(--surface); border: 1px solid var(--border);
