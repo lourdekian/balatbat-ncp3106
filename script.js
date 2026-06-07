@@ -1,6 +1,3 @@
-/* Smooth interaction layer for Kobe's portfolio.
-   Visual behavior only. It does not edit portfolio text or personal details. */
-
 (function () {
   'use strict';
 
