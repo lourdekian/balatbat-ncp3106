@@ -16,16 +16,9 @@
   <link rel="stylesheet" href="Style.css" />
 </head>
 <body>
-  
 
-  <!-- ══════════════════════
-       PARTICLE CANVAS
-       ══════════════════════ -->
   <canvas id="particleCanvas"></canvas>
 
-  <!-- ══════════════════════
-       CUSTOM CURSOR
-       ══════════════════════ -->
   <div class="custom-cursor" id="customCursor"></div>
   <div class="cursor-dot" id="cursorDot"></div>
 
@@ -50,7 +43,7 @@
     </button>
   </nav>
 
-  <!-- ── MOBILE MENU OVERLAY ── -->
+  <!-- ── MOBILE MENU ── -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <a href="#home" class="mobile-link">Home</a>
     <a href="#about" class="mobile-link">About</a>
@@ -70,9 +63,17 @@
       <div class="badge"><span class="heartbeat-icon">✦</span> Available for work</div>
 
       <div class="avatar-wrap heartbeat-pulse">
-        <img src="./me.jpg" alt="Kobe Christian Balatbat" loading="eager" decoding="async" fetchpriority="high"
-             onerror="if(!this.dataset.try){this.dataset.try='1';this.src='about.JPG';}else if(this.dataset.try==='1'){this.dataset.try='2';this.src='me.jpeg';}else if(this.dataset.try==='2'){this.dataset.try='3';this.src='me.JPEG';}else if(this.dataset.try==='3'){this.dataset.try='4';this.src='me.png';}else if(this.dataset.try==='4'){this.dataset.try='5';this.src='me.PNG';}else{this.style.display='none';}" />
-        <div class="avatar-fallback" style="display:none;"><span class="heartbeat-icon">🙂</span></div>
+        <img
+          id="heroImage"
+          src="me.jpg"
+          alt="Kobe Christian Balatbat"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="avatar-fallback" id="heroFallback" style="display:none;">
+          <span>🙂</span>
+        </div>
         <div class="avatar-ring" aria-hidden="true"></div>
       </div>
 
@@ -108,7 +109,7 @@
         </a>
       </div>
 
-      <!-- Timezone & Availability Widget -->
+      <!-- Timezone Widget -->
       <div class="timezone-widget">
         <div>
           <div class="timezone-label">Philippines (PHT)</div>
@@ -190,8 +191,13 @@
 
         <div class="about-image-wrap reveal">
           <div class="about-image-glow"></div>
-          <img src="about.jpg" alt="Kobe Christian Balatbat — About" loading="lazy" decoding="async"
-               onerror="if(!this.dataset.try){this.dataset.try='1';this.src='about.JPG';}else if(this.dataset.try==='1'){this.dataset.try='2';this.src='about.jpeg';}else if(this.dataset.try==='2'){this.dataset.try='3';this.src='about.JPEG';}else if(this.dataset.try==='3'){this.dataset.try='4';this.src='about.png';}else if(this.dataset.try==='4'){this.dataset.try='5';this.src='about.PNG';}else{this.style.display='none';}" />
+          <img
+            id="aboutImage"
+            src="about.jpg"
+            alt="Kobe Christian Balatbat — About"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
@@ -243,69 +249,69 @@
     <!-- ══════════════════════
          EXPERIENCE
          ══════════════════════ -->
-<section id="experience">
-  <div class="section-inner">
-    <p class="section-label reveal">Work history</p>
-    <h2 class="section-title reveal">Experience</h2>
-    <div class="divider reveal"></div>
+    <section id="experience">
+      <div class="section-inner">
+        <p class="section-label reveal">Work history</p>
+        <h2 class="section-title reveal">Experience</h2>
+        <div class="divider reveal"></div>
 
-    <div class="timeline">
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="exp-header">
-            <h3 class="exp-title">Professional Development</h3>
-            <span class="exp-duration">⏱ Dec 2025 – May 2026</span>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="exp-header">
+                <h3 class="exp-title">Professional Development</h3>
+                <span class="exp-duration">⏱ Dec 2025 – May 2026</span>
+              </div>
+              <p class="exp-company">📍 Career Break · Upskilling &amp; Project Building</p>
+              <ul class="exp-bullets">
+                <li>After my previous role ended, I used this period intentionally to invest in professional growth, strengthen my technical skills, and prepare for my next opportunity.</li>
+                <li>I focused on learning automation tools and building workflow-focused projects, including an automated Google Sheets pipeline tracker and a custom task tracker designed to improve organization and efficiency.</li>
+                <li>I also explored different CRM systems and business platforms to broaden my operational knowledge and better understand how teams manage pipelines, tasks, client data, and day-to-day processes.</li>
+                <li>This was a productive development period that helped me sharpen my problem-solving mindset, expand my toolset, and become more confident in creating systems that support smoother, more efficient work.</li>
+              </ul>
+              <div class="exp-tools">
+                <span class="exp-tool">⚙️ Automation Tools</span>
+                <span class="exp-tool">🌐 Google Sheets</span>
+                <span class="exp-tool">📋 Task Tracking</span>
+                <span class="exp-tool">🗂️ CRM Platforms</span>
+                <span class="exp-tool">📈 Workflow Optimization</span>
+              </div>
+            </div>
           </div>
-          <p class="exp-company">📍 Career Break · Upskilling &amp; Project Building</p>
-          <ul class="exp-bullets">
-            <li>After my previous role ended, I used this period intentionally to invest in professional growth, strengthen my technical skills, and prepare for my next opportunity.</li>
-            <li>I focused on learning automation tools and building workflow-focused projects, including an automated Google Sheets pipeline tracker and a custom task tracker designed to improve organization and efficiency.</li>
-            <li>I also explored different CRM systems and business platforms to broaden my operational knowledge and better understand how teams manage pipelines, tasks, client data, and day-to-day processes.</li>
-            <li>This was a productive development period that helped me sharpen my problem-solving mindset, expand my toolset, and become more confident in creating systems that support smoother, more efficient work.</li>
-          </ul>
-          <div class="exp-tools">
-            <span class="exp-tool">⚙️ Automation Tools</span>
-            <span class="exp-tool">🌐 Google Sheets</span>
-            <span class="exp-tool">📋 Task Tracking</span>
-            <span class="exp-tool">🗂️ CRM Platforms</span>
-            <span class="exp-tool">📈 Workflow Optimization</span>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="exp-header">
+                <h3 class="exp-title">Mortgage Broker Associate</h3>
+                <span class="exp-duration">⏱ Aug 2024 – Nov 2025</span>
+              </div>
+              <p class="exp-company">📍 AU-Based Real Estate &amp; Mortgage Brokerage · Remote</p>
+              <ul class="exp-bullets">
+                <li>At any given time, I was juggling 50+ active borrower files — tracking each one from the first application all the way through closing. Using Quickli, GoHighLevel, AOL and MyCRM, I kept everything organized and accurate, maintaining a 99%+ data accuracy rate while making sure nothing slipped through the cracks.</li>
+                <li>I took ownership of 100+ borrower records, loan files, and closing documents, making sure every file in Microsoft 365 and Google Workspace was clean, current, and ready for review at a moment's notice.</li>
+                <li>Every month, I helped move 20+ mortgage applications forward — collecting borrower documents, verifying income records, and preparing materials for underwriting so loan officers could focus on what they do best.</li>
+                <li>I became the go-to person across 5+ loan officer pipelines for keeping communication flowing. From scheduling appointments to sending follow-ups and status updates, I made sure borrowers always felt supported and informed.</li>
+                <li>I was involved in every stage of the loan process — pre-approval, underwriting, funding, and closing. Throughout all of it, I handled sensitive financial information for 100+ borrowers with full confidentiality and care.</li>
+                <li>I noticed where our CRM workflows were slowing things down and took initiative to fix them. The result was better pipeline visibility for the whole team and fewer delays across the board.</li>
+                <li>Managing a pipeline of 50+ active applications wasn't always easy, but I consistently kept files on track, met service-level targets, and made sure every borrower's journey from intake to close went as smoothly as possible.</li>
+              </ul>
+              <div class="exp-tools">
+                <span class="exp-tool">🧮 Quickli</span>
+                <span class="exp-tool">🚀 GoHighLevel</span>
+                <span class="exp-tool">📧 AOL</span>
+                <span class="exp-tool">🗂️ MyCRM</span>
+                <span class="exp-tool">🪟 Microsoft 365</span>
+                <span class="exp-tool">🌐 Google Workspace</span>
+                <span class="exp-tool">✍️ DocuSign</span>
+                <span class="exp-tool">📄 Adobe PDF Editor</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="exp-header">
-            <h3 class="exp-title">Mortgage Broker Associate</h3>
-            <span class="exp-duration">⏱ Aug 2024 – Nov 2025</span>
-          </div>
-          <p class="exp-company">📍 AU-Based Real Estate &amp; Mortgage Brokerage · Remote</p>
-          <ul class="exp-bullets">
-            <li>At any given time, I was juggling 50+ active borrower files — tracking each one from the first application all the way through closing. Using Quickli, GoHighLevel, AOL and MyCRM, I kept everything organized and accurate, maintaining a 99%+ data accuracy rate while making sure nothing slipped through the cracks.</li>
-            <li>I took ownership of 100+ borrower records, loan files, and closing documents, making sure every file in Microsoft 365 and Google Workspace was clean, current, and ready for review at a moment's notice.</li>
-            <li>Every month, I helped move 20+ mortgage applications forward — collecting borrower documents, verifying income records, and preparing materials for underwriting so loan officers could focus on what they do best.</li>
-            <li>I became the go-to person across 5+ loan officer pipelines for keeping communication flowing. From scheduling appointments to sending follow-ups and status updates, I made sure borrowers always felt supported and informed.</li>
-            <li>I was involved in every stage of the loan process — pre-approval, underwriting, funding, and closing. Throughout all of it, I handled sensitive financial information for 100+ borrowers with full confidentiality and care.</li>
-            <li>I noticed where our CRM workflows were slowing things down and took initiative to fix them. The result was better pipeline visibility for the whole team and fewer delays across the board.</li>
-            <li>Managing a pipeline of 50+ active applications wasn't always easy, but I consistently kept files on track, met service-level targets, and made sure every borrower's journey from intake to close went as smoothly as possible.</li>
-          </ul>
-          <div class="exp-tools">
-            <span class="exp-tool">🧮 Quickli</span>
-            <span class="exp-tool">🚀 GoHighLevel</span>
-            <span class="exp-tool">📧 AOL</span>
-            <span class="exp-tool">🗂️ MyCRM</span>
-            <span class="exp-tool">🪟 Microsoft 365</span>
-            <span class="exp-tool">🌐 Google Workspace</span>
-            <span class="exp-tool">✍️ DocuSign</span>
-            <span class="exp-tool">📄 Adobe PDF Editor</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- ══════════════════════
          EDUCATION
@@ -363,211 +369,157 @@
       </div>
     </section>
 
-<!-- ══════════════════════
-     SERVICES
-     ══════════════════════ -->
-<section id="services" style="background: var(--bg2); border-top: 1px solid var(--border);">
-  <div class="section-inner">
-    <p class="section-label reveal">What I do</p>
-    <h2 class="section-title reveal">Services I Offer</h2>
-    <div class="divider reveal"></div>
+    <!-- ══════════════════════
+         SERVICES
+         ══════════════════════ -->
+    <section id="services" style="background: var(--bg2); border-top: 1px solid var(--border);">
+      <div class="section-inner">
+        <p class="section-label reveal">What I do</p>
+        <h2 class="section-title reveal">Services I Offer</h2>
+        <div class="divider reveal"></div>
 
-    <div class="services-grid">
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <span class="service-icon">📑</span>
+            <h3>Loan File & Compliance Management</h3>
+            <p>I organize borrower documents, track conditional approvals, and ensure every file meets lender and regulatory standards — end to end. Strict confidentiality is maintained across all borrower records, so your operations stay clean, compliant, and audit-ready.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon">🗂️</span>
+            <h3>CRM & Workflow Optimization</h3>
+            <p>Fluent in Salesforce, Velocity, HubSpot, Zoho, GoHighLevel, MyCRM, and Quickli. I build automated workflows that cut down on manual tasks, reduce errors, and sharpen broker efficiency — so your team spends less time on admin and more time closing deals.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon">📊</span>
+            <h3>Data Analysis & Reporting</h3>
+            <p>I assess borrowing capacity, loan suitability, and pipeline performance with precision. Using Python or JavaScript, I create dashboards and scripts that turn raw loan data into clear, actionable metrics — so you always know exactly where your pipeline stands.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon">🤝</span>
+            <h3>Client & Lender Communication</h3>
+            <p>I handle borrower inquiries, coordinate status updates, and liaise directly with lenders to keep every deal on track. Proactive communication means fewer surprises, faster responses, and deals that don't stall waiting for a reply.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon">⚙️</span>
+            <h3>Process Automation & Technical Support</h3>
+            <p>Using Zapier, Google Apps Script, and AI tooling, I automate the repetitive admin tasks draining your team's time. I also troubleshoot CRM integrations and keep systems running reliably — so your tech stack works for you, not against you.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon">🖥️</span>
+            <h3>Technical Documentation & Systems Engineering</h3>
+            <p>I draft SOPs, compliance guides, and workflow documentation your team can actually follow. Applying an engineering mindset, I identify operational bottlenecks and redesign processes to eliminate friction — built to scale as your business grows.</p>
+          </div>
+        </div>
 
-      <!-- 1. Loan File & Compliance Management -->
-      <div class="service-card reveal">
-        <span class="service-icon">📑</span>
-        <h3>Loan File & Compliance Management</h3>
-        <p>
-          I organize borrower documents, track conditional approvals, and ensure
-          every file meets lender and regulatory standards — end to end.
-          Strict confidentiality is maintained across all borrower records,
-          so your operations stay clean, compliant, and audit-ready.
-        </p>
-      </div>
+        <!-- Tools Stack -->
+        <div class="tools-grid reveal">
+          <div class="tools-group">
+            <div class="tools-group-label">CRM &amp; Mortgage Platforms</div>
+            <div class="tools-tags">
+              <span class="tools-tag">Velocity</span>
+              <span class="tools-tag">Salesforce</span>
+              <span class="tools-tag">HubSpot</span>
+              <span class="tools-tag">GoHighLevel</span>
+              <span class="tools-tag">Zoho CRM</span>
+              <span class="tools-tag">MyCRM</span>
+              <span class="tools-tag">Quickli</span>
+            </div>
+          </div>
+          <div class="tools-group">
+            <div class="tools-group-label">Automation &amp; AI</div>
+            <div class="tools-tags">
+              <span class="tools-tag">Zapier</span>
+              <span class="tools-tag">Make</span>
+              <span class="tools-tag">n8n</span>
+              <span class="tools-tag">Google Apps Script</span>
+              <span class="tools-tag">ChatGPT / AI Tools</span>
+            </div>
+          </div>
+          <div class="tools-group">
+            <div class="tools-group-label">Data &amp; Dev</div>
+            <div class="tools-tags">
+              <span class="tools-tag">Python</span>
+              <span class="tools-tag">JavaScript</span>
+              <span class="tools-tag">Excel · Sheets</span>
+              <span class="tools-tag">Notion</span>
+              <span class="tools-tag">Adobe PDF</span>
+            </div>
+          </div>
+          <div class="tools-group">
+            <div class="tools-group-label">Productivity &amp; Comms</div>
+            <div class="tools-tags">
+              <span class="tools-tag">Microsoft 365</span>
+              <span class="tools-tag">Google Workspace</span>
+              <span class="tools-tag">Slack</span>
+              <span class="tools-tag">Zoom</span>
+              <span class="tools-tag">Asana</span>
+              <span class="tools-tag">Trello</span>
+              <span class="tools-tag">Xero</span>
+            </div>
+          </div>
+        </div>
 
-      <!-- 2. CRM & Workflow Optimization -->
-      <div class="service-card reveal">
-        <span class="service-icon">🗂️</span>
-        <h3>CRM & Workflow Optimization</h3>
-        <p>
-          Fluent in Salesforce, Velocity, HubSpot, Zoho, GoHighLevel, MyCRM,
-          and Quickli. I build automated workflows that cut down on manual tasks,
-          reduce errors, and sharpen broker efficiency — so your team spends
-          less time on admin and more time closing deals.
-        </p>
-      </div>
-
-      <!-- 3. Data Analysis & Reporting -->
-      <div class="service-card reveal">
-        <span class="service-icon">📊</span>
-        <h3>Data Analysis & Reporting</h3>
-        <p>
-          I assess borrowing capacity, loan suitability, and pipeline performance
-          with precision. Using Python or JavaScript, I create dashboards and
-          scripts that turn raw loan data into clear, actionable metrics — so
-          you always know exactly where your pipeline stands.
-        </p>
-      </div>
-
-      <!-- 4. Client & Lender Communication -->
-      <div class="service-card reveal">
-        <span class="service-icon">🤝</span>
-        <h3>Client & Lender Communication</h3>
-        <p>
-          I handle borrower inquiries, coordinate status updates, and liaise
-          directly with lenders to keep every deal on track. Proactive
-          communication means fewer surprises, faster responses, and
-          deals that don't stall waiting for a reply.
-        </p>
-      </div>
-
-      <!-- 5. Process Automation & Technical Support -->
-      <div class="service-card reveal">
-        <span class="service-icon">⚙️</span>
-        <h3>Process Automation & Technical Support</h3>
-        <p>
-          Using Zapier, Google Apps Script, and AI tooling, I automate the
-          repetitive admin tasks draining your team's time. I also troubleshoot
-          CRM integrations and keep systems running reliably — so your tech
-          stack works for you, not against you.
-        </p>
-      </div>
-
-      <!-- 6. Technical Documentation & Systems Engineering -->
-      <div class="service-card reveal">
-        <span class="service-icon">🖥️</span>
-        <h3>Technical Documentation & Systems Engineering</h3>
-        <p>
-          I draft SOPs, compliance guides, and workflow documentation your team
-          can actually follow. Applying an engineering mindset, I identify
-          operational bottlenecks and redesign processes to eliminate friction —
-          built to scale as your business grows.
-        </p>
-      </div>
-
-    </div>
-    <!-- END services-grid -->
-
-    <!-- ── Tools Stack ── -->
-    <div class="tools-grid reveal">
-      <div class="tools-group">
-        <div class="tools-group-label">CRM &amp; Mortgage Platforms</div>
-        <div class="tools-tags">
-          <span class="tools-tag">Velocity</span>
-          <span class="tools-tag">Salesforce</span>
-          <span class="tools-tag">HubSpot</span>
-          <span class="tools-tag">GoHighLevel</span>
-          <span class="tools-tag">Zoho CRM</span>
-          <span class="tools-tag">MyCRM</span>
-          <span class="tools-tag">Quickli</span>
+        <!-- Skill Bars -->
+        <div class="skill-bars reveal">
+          <div class="skill-bars-title">Proficiency Levels</div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Loan File & Compliance Management</span>
+              <span class="skill-bar-percent">95%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="95"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">CRM & Workflow Optimization</span>
+              <span class="skill-bar-percent">97%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="97"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Data Analysis & Reporting</span>
+              <span class="skill-bar-percent">88%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="88"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Client & Lender Communication</span>
+              <span class="skill-bar-percent">96%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="96"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Process Automation & Technical Support</span>
+              <span class="skill-bar-percent">97%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="97"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Technical Documentation & Systems Engineering</span>
+              <span class="skill-bar-percent">95%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="95"></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="tools-group">
-        <div class="tools-group-label">Automation &amp; AI</div>
-        <div class="tools-tags">
-          <span class="tools-tag">Zapier</span>
-          <span class="tools-tag">Make</span>
-          <span class="tools-tag">n8n</span>
-          <span class="tools-tag">Google Apps Script</span>
-          <span class="tools-tag">ChatGPT / AI Tools</span>
-        </div>
-      </div>
-      <div class="tools-group">
-        <div class="tools-group-label">Data &amp; Dev</div>
-        <div class="tools-tags">
-          <span class="tools-tag">Python</span>
-          <span class="tools-tag">JavaScript</span>
-          <span class="tools-tag">Excel · Sheets</span>
-          <span class="tools-tag">Notion</span>
-          <span class="tools-tag">Adobe PDF</span>
-        </div>
-      </div>
-      <div class="tools-group">
-        <div class="tools-group-label">Productivity &amp; Comms</div>
-        <div class="tools-tags">
-          <span class="tools-tag">Microsoft 365</span>
-          <span class="tools-tag">Google Workspace</span>
-          <span class="tools-tag">Slack</span>
-          <span class="tools-tag">Zoom</span>
-          <span class="tools-tag">Asana</span>
-          <span class="tools-tag">Trello</span>
-          <span class="tools-tag">Xero</span>
-        </div>
-      </div>
-    </div>
-    <!-- END tools-grid -->
+    </section>
 
-    <!-- ── Skill Proficiency Bars ── -->
-    <div class="skill-bars reveal">
-      <div class="skill-bars-title">Proficiency Levels</div>
-
-      <div class="skill-bar-item">
-        <div class="skill-bar-header">
-          <span class="skill-bar-name">Loan File & Compliance Management</span>
-          <span class="skill-bar-percent">95%</span>
-        </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" data-width="95"></div>
-        </div>
-      </div>
-
-      <div class="skill-bar-item">
-        <div class="skill-bar-header">
-          <span class="skill-bar-name">CRM & Workflow Optimization</span>
-          <span class="skill-bar-percent">97%</span>
-        </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" data-width="97"></div>
-        </div>
-      </div>
-
-      <div class="skill-bar-item">
-        <div class="skill-bar-header">
-          <span class="skill-bar-name">Data Analysis & Reporting</span>
-          <span class="skill-bar-percent">88%</span>
-        </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" data-width="88"></div>
-        </div>
-      </div>
-
-      <div class="skill-bar-item">
-        <div class="skill-bar-header">
-          <span class="skill-bar-name">Client & Lender Communication</span>
-          <span class="skill-bar-percent">96%</span>
-        </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" data-width="96"></div>
-        </div>
-      </div>
-
-      <div class="skill-bar-item">
-        <div class="skill-bar-header">
-          <span class="skill-bar-name">Process Automation & Technical Support</span>
-          <span class="skill-bar-percent">97%</span>
-        </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" data-width="97"></div>
-        </div>
-      </div>
-
-      <div class="skill-bar-item">
-        <div class="skill-bar-header">
-          <span class="skill-bar-name">Technical Documentation & Systems Engineering</span>
-          <span class="skill-bar-percent">95%</span>
-        </div>
-        <div class="skill-bar-track">
-          <div class="skill-bar-fill" data-width="95"></div>
-        </div>
-      </div>
-
-    </div>
-    <!-- END skill-bars -->
-
-  </div>
-</section>
-    
     <!-- ══════════════════════
          CERTIFICATIONS
          ══════════════════════ -->
@@ -632,7 +584,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="project-card reveal">
             <div class="project-image-wrap">
               <img src="project2.png" alt="Property Management Bookkeeping" class="project-image"
@@ -665,7 +617,6 @@
           Interested in working together? Reach out through any of the channels below and I'll get back to you as soon as possible.
         </p>
 
-        <!-- Professional Profiles -->
         <div class="contact-group-label reveal">Professional Profiles</div>
 
         <div class="profile-logo-grid reveal" aria-label="Professional profile links">
@@ -673,19 +624,16 @@
             <img src="linkedin-logo.png" alt="" class="linkedin-logo-img" loading="lazy" decoding="async" />
             <span class="sr-only">LinkedIn</span>
           </a>
-
           <a href="https://www.onlinejobs.ph/jobseekers/info/4976526" target="_blank" rel="noopener noreferrer" class="profile-logo profile-olj" aria-label="Open OnlineJobs.ph profile" data-tooltip="OnlineJobs.ph">
             <img src="onlinejobs-logo.jpeg" alt="" class="onlinejobs-logo-img" loading="lazy" decoding="async" />
             <span class="sr-only">OnlineJobs.ph</span>
           </a>
-
           <a href="https://ph.jobstreet.com/profiles/kobechristian-balatbat-6kPTY9S5jl" target="_blank" rel="noopener noreferrer" class="profile-logo profile-jobstreet" aria-label="Open JobStreet profile" data-tooltip="JobStreet">
             <img src="jobstreet-logo.png" alt="" class="jobstreet-logo-img" loading="lazy" decoding="async" />
             <span class="sr-only">JobStreet</span>
           </a>
         </div>
 
-        <!-- Direct Contact -->
         <div class="contact-group-label reveal" style="margin-top:1.5rem;">Direct Contact</div>
 
         <a href="tel:09214055369" class="contact-detail reveal" style="text-decoration:none; color:inherit;">
@@ -712,7 +660,6 @@
           </div>
         </a>
 
-        <!-- Book a Call -->
         <div class="contact-group-label reveal" style="margin-top:1.5rem;">Schedule a Meeting</div>
         <a href="https://calendly.com/kobebalatbat-va/30min" target="_blank" rel="noopener noreferrer" class="calendly-cta-block reveal">
           <div class="calendly-cta-inner">
@@ -726,8 +673,6 @@
             <div class="calendly-cta-arrow">↗</div>
           </div>
         </a>
-
-        
       </div>
     </section>
   </main>
@@ -740,175 +685,20 @@
 
   <button id="backToTop" aria-label="Back to top">↑</button>
 
-  <!-- ══════════════════════
-       SCRIPTS — Performance Optimised
-       ══════════════════════ -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
   <script>
-    
+    /* ── Typed.js ── */
+    new Typed('#typed-name', {
+      strings: ['Kobe Christian Balatbat.', 'Your Virtual Assistant.', 'Your Productivity Partner.'],
+      typeSpeed: 65,
+      backSpeed: 35,
+      backDelay: 2000,
+      loop: true,
+      smartBackspace: true
+    });
 
-    /* ══════════════════════
-       PARTICLE BACKGROUND — GPU optimized canvas
-       ══════════════════════ */
-    (function () {
-      var canvas = document.getElementById('particleCanvas');
-      if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var ctx = canvas.getContext('2d');
-      var particles = [];
-      var particleCount = 0;
-      if (particleCount === 0) return;
-      var mouse = { x: null, y: null, radius: 120 };
-
-      function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      resize();
-      window.addEventListener('resize', resize);
-
-      window.addEventListener('mousemove', function (e) {
-        mouse.x = e.clientX;
-        mouse.y = e.clientY;
-      });
-
-      function Particle() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.baseX = this.x;
-        this.baseY = this.y;
-        this.density = Math.random() * 30 + 1;
-        this.vx = (Math.random() - 0.5) * 0.3;
-        this.vy = (Math.random() - 0.5) * 0.3;
-      }
-
-      Particle.prototype.draw = function () {
-        ctx.fillStyle = 'rgba(74, 222, 128, 0.5)';
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.fill();
-      };
-
-      Particle.prototype.update = function () {
-        /* Gentle floating */
-        this.x += this.vx;
-        this.y += this.vy;
-
-        /* Wrap around edges */
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
-
-        /* Mouse interaction */
-        if (mouse.x !== null && mouse.y !== null) {
-          var dx = mouse.x - this.x;
-          var dy = mouse.y - this.y;
-          var dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < mouse.radius) {
-            var force = (mouse.radius - dist) / mouse.radius;
-            var angle = Math.atan2(dy, dx);
-            this.x -= Math.cos(angle) * force * 2;
-            this.y -= Math.sin(angle) * force * 2;
-          }
-        }
-      };
-
-      function init() {
-        particles = [];
-        for (var i = 0; i < particleCount; i++) {
-          particles.push(new Particle());
-        }
-      }
-
-      function connectParticles() {
-        for (var i = 0; i < particles.length; i++) {
-          for (var j = i + 1; j < particles.length; j++) {
-            var dx = particles[i].x - particles[j].x;
-            var dy = particles[i].y - particles[j].y;
-            var dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 150) {
-              ctx.strokeStyle = 'rgba(74, 222, 128, ' + (0.15 - dist / 1000) + ')';
-              ctx.lineWidth = 0.5;
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.stroke();
-            }
-          }
-        }
-      }
-
-      function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (var i = 0; i < particles.length; i++) {
-          particles[i].update();
-          particles[i].draw();
-        }
-        connectParticles();
-        requestAnimationFrame(animate);
-      }
-
-      init();
-      animate();
-    })();
-
-    /* ══════════════════════
-       CUSTOM CURSOR
-       ══════════════════════ */
-    (function () {
-      var cursor = document.getElementById('customCursor');
-      var dot = document.getElementById('cursorDot');
-      var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-      var useCustomCursor = false;
-
-      if (!useCustomCursor || isTouch || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-      var cursorX = 0, cursorY = 0;
-      var dotX = 0, dotY = 0;
-
-      document.addEventListener('mousemove', function (e) {
-        cursorX = e.clientX;
-        cursorY = e.clientY;
-        cursor.classList.add('visible');
-        dot.classList.add('visible');
-      });
-
-      document.addEventListener('mouseleave', function () {
-        cursor.classList.remove('visible');
-        dot.classList.remove('visible');
-      });
-
-      /* Smooth follow for cursor ring */
-      function animateCursor() {
-        dotX += (cursorX - dotX) * 0.9;
-        dotY += (cursorY - dotY) * 0.9;
-        dot.style.left = dotX + 'px';
-        dot.style.top = dotY + 'px';
-
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
-
-        requestAnimationFrame(animateCursor);
-      }
-      animateCursor();
-
-      /* Hover effect on interactive elements */
-      var hoverables = document.querySelectorAll('a, button, .btn, .service-card, .competency-card, .edu-card, .cert-item, .timeline-card, .language-card');
-      hoverables.forEach(function (el) {
-        el.addEventListener('mouseenter', function () {
-          cursor.classList.add('hovering');
-        });
-        el.addEventListener('mouseleave', function () {
-          cursor.classList.remove('hovering');
-        });
-      });
-    })();
-
-    /* ══════════════════════
-       TIMEZONE & AVAILABILITY
-       ══════════════════════ */
+    /* ── Live Clock ── */
     (function () {
       var timeEl = document.getElementById('liveTime');
       var statusDot = document.getElementById('statusDot');
@@ -916,302 +706,37 @@
 
       function updateTime() {
         var now = new Date();
-        /* Philippines Time (UTC+8) */
-        var options = {
+        var timeStr = now.toLocaleTimeString('en-US', {
           timeZone: 'Asia/Manila',
           hour: '2-digit',
           minute: '2-digit',
           hour12: true
-        };
-        var timeStr = now.toLocaleTimeString('en-US', options);
-        timeEl.textContent = timeStr;
+        });
+        if (timeEl) timeEl.textContent = timeStr;
 
-        /* Check availability (9 AM - 10 PM PHT, Mon-Fri) */
         var phTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Manila' }));
         var hour = phTime.getHours();
         var day = phTime.getDay();
-        var isWorkHours = hour >= 7 && hour < 22 && day >= 1 && day <= 5;
+        var isAvailable = hour >= 7 && hour < 22 && day >= 1 && day <= 5;
 
-        if (isWorkHours) {
-          statusDot.classList.remove('offline');
-          statusText.classList.remove('offline');
-          statusText.textContent = 'Available Now';
-        } else {
-          statusDot.classList.add('offline');
-          statusText.classList.add('offline');
-          statusText.textContent = 'Back Soon';
+        if (statusDot && statusText) {
+          if (isAvailable) {
+            statusDot.classList.remove('offline');
+            statusText.classList.remove('offline');
+            statusText.textContent = 'Available Now';
+          } else {
+            statusDot.classList.add('offline');
+            statusText.classList.add('offline');
+            statusText.textContent = 'Back Soon';
+          }
         }
       }
 
       updateTime();
-      setInterval(updateTime, 30000); /* Update every 30 seconds */
-    })();
-
-    /* ── Typed.js init ── */
-    new Typed('#typed-name', {
-      strings: ['Kobe Christian Balatbat.', 'Your Virtual Assistant.', 'Your Productivity Partner.'],
-      typeSpeed: 65, backSpeed: 35, backDelay: 2000, loop: true, smartBackspace: true
-    });
-
-    /* ══════════════════════
-       SCROLL — uses rAF throttle instead of raw scroll events
-       ══════════════════════ */
-    var progressBar = document.getElementById('progressBar');
-    var backToTop = document.getElementById('backToTop');
-    var ticking = false;
-
-    function onScroll() {
-      var scrolled = window.scrollY;
-      var total = document.body.scrollHeight - window.innerHeight;
-      var ratio = total > 0 ? scrolled / total : 0;
-
-      /* Use scaleX for GPU compositing (no layout/paint) */
-      progressBar.style.transform = 'scaleX(' + ratio + ')';
-
-      backToTop.classList.toggle('show', scrolled > 400);
-      ticking = false;
-    }
-
-    window.addEventListener('scroll', function () {
-      if (!ticking) {
-        requestAnimationFrame(onScroll);
-        ticking = true;
-      }
-    }, { passive: true });
-
-    backToTop.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    /* ══════════════════════
-       ACTIVE NAV HIGHLIGHT — scroll position based (works for all section heights)
-       ══════════════════════ */
-    (function () {
-      var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-      var sectionIds = Array.prototype.map.call(navLinks, function (a) {
-        return a.getAttribute('href').slice(1);
-      });
-
-      function setActive(id) {
-        navLinks.forEach(function (a) {
-          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
-        });
-      }
-
-      function updateActiveNav() {
-        /* Trigger line = 25% down from top of viewport */
-        var triggerY = window.scrollY + window.innerHeight * 0.25;
-        var current = sectionIds[0];
-
-        for (var i = 0; i < sectionIds.length; i++) {
-          var el = document.getElementById(sectionIds[i]);
-          if (el && el.offsetTop <= triggerY) {
-            current = sectionIds[i];
-          }
-        }
-        setActive(current);
-      }
-
-      var navTicking = false;
-      window.addEventListener('scroll', function () {
-        if (!navTicking) {
-          requestAnimationFrame(function () {
-            updateActiveNav();
-            navTicking = false;
-          });
-          navTicking = true;
-        }
-      }, { passive: true });
-
-      updateActiveNav(); /* run once on load */
-    })();
-
-    /* ══════════════════════
-       REVEAL — IntersectionObserver with staggered rAF
-       ══════════════════════ */
-    (function () {
-      var reveals = document.querySelectorAll('.reveal');
-      var queue = [];
-      var processing = false;
-
-      function processQueue() {
-        if (queue.length === 0) { processing = false; return; }
-        var el = queue.shift();
-        el.classList.add('visible');
-        /* Remove will-change after transition ends to free GPU memory */
-        el.addEventListener('transitionend', function handler() {
-          el.classList.add('settled');
-          el.removeEventListener('transitionend', handler);
-        }, { once: true });
-        /* Stagger: next item after 80ms via rAF */
-        setTimeout(function () { requestAnimationFrame(processQueue); }, 80);
-      }
-
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            queue.push(entry.target);
-            observer.unobserve(entry.target);
-            if (!processing) {
-              processing = true;
-              requestAnimationFrame(processQueue);
-            }
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-      reveals.forEach(function (el) { observer.observe(el); });
-    })();
-
-    /* ══════════════════════
-       THEME TOGGLE — with localStorage persistence
-       ══════════════════════ */
-    (function () {
-      var toggle = document.getElementById('themeToggle');
-      var darkVars = {
-        '--bg': '#05070a',
-        '--bg2': '#080e13',
-        '--surface': 'rgba(15, 24, 31, 0.84)',
-        '--surface2': 'rgba(21, 34, 40, 0.92)',
-        '--border': 'rgba(191, 219, 254, 0.15)',
-        '--em': '#2ddc91',
-        '--em2': '#13b981',
-        '--em3': '#a7f3d0',
-        '--em4': '#d1fae5',
-        '--gold': '#ffd166',
-        '--gold2': '#ffe29a',
-        '--blue': '#4cc9f0',
-        '--blue2': '#7dd3fc',
-        '--text': '#effaf4',
-        '--muted': '#a6b7c3',
-        '--white': '#ffffff'
-      };
-      var lightVars = {
-        '--bg': '#f6f8fb',
-        '--bg2': '#eef3f7',
-        '--surface': 'rgba(255, 255, 255, 0.88)',
-        '--surface2': 'rgba(255, 255, 255, 0.96)',
-        '--border': 'rgba(15, 23, 42, 0.12)',
-        '--em': '#0f9f6e',
-        '--em2': '#0b815a',
-        '--em3': '#047857',
-        '--em4': '#065f46',
-        '--gold': '#b7791f',
-        '--gold2': '#92400e',
-        '--blue': '#2563eb',
-        '--blue2': '#1d4ed8',
-        '--text': '#102018',
-        '--muted': '#64748b',
-        '--white': '#06120c'
-      };
-
-      /* Load saved preference */
-      var saved = localStorage.getItem('theme');
-      var isDark = saved !== 'light';
-
-      function applyTheme() {
-        toggle.textContent = isDark ? '🌙' : '☀️';
-        document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
-        var vars = isDark ? darkVars : lightVars;
-        var root = document.documentElement.style;
-        for (var key in vars) { root.setProperty(key, vars[key]); }
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      }
-
-      applyTheme();
-
-      toggle.addEventListener('click', function () {
-        isDark = !isDark;
-        applyTheme();
-      });
-    })();
-
-    /* ══════════════════════
-       HAMBURGER MENU
-       ══════════════════════ */
-    (function () {
-      var hamburger = document.getElementById('hamburger');
-      var mobileMenu = document.getElementById('mobileMenu');
-      var mobileLinks = document.querySelectorAll('.mobile-link');
-
-      function toggleMenu(open) {
-        hamburger.classList.toggle('open', open);
-        mobileMenu.classList.toggle('open', open);
-        hamburger.setAttribute('aria-expanded', String(open));
-        document.body.style.overflow = open ? 'hidden' : '';
-      }
-
-      hamburger.addEventListener('click', function () {
-        toggleMenu(!hamburger.classList.contains('open'));
-      });
-      mobileLinks.forEach(function (link) {
-        link.addEventListener('click', function () { toggleMenu(false); });
-      });
-      mobileMenu.addEventListener('click', function (e) {
-        if (e.target === mobileMenu) toggleMenu(false);
-      });
-    })();
-
-    /* ══════════════════════
-       ANIMATED STATS COUNTER — rAF based
-       ══════════════════════ */
-    (function () {
-      var statNums = document.querySelectorAll('.stat-num[data-target]');
-
-      var statsObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            var el = entry.target;
-            var target = parseInt(el.dataset.target, 10);
-            var duration = 1200;
-            var start = -1;
-
-            function tick(now) {
-              if (start < 0) start = now;
-              var elapsed = now - start;
-              var progress = Math.min(elapsed / duration, 1);
-              /* Ease-out cubic */
-              var ease = 1 - Math.pow(1 - progress, 3);
-              el.textContent = Math.floor(ease * target);
-              if (progress < 1) {
-                requestAnimationFrame(tick);
-              } else {
-                el.textContent = target;
-              }
-            }
-            requestAnimationFrame(tick);
-            statsObserver.unobserve(el);
-          }
-        });
-      }, { threshold: 0.5 });
-
-      statNums.forEach(function (el) { statsObserver.observe(el); });
-    })();
-
-    /* ══════════════════════
-       SKILL BARS — Animated fill on scroll
-       ══════════════════════ */
-    (function () {
-      var skillBars = document.querySelectorAll('.skill-bar-fill[data-width]');
-      var langBars = document.querySelectorAll('.language-bar-fill[data-width]');
-      var allBars = Array.prototype.slice.call(skillBars).concat(Array.prototype.slice.call(langBars));
-
-      var barObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            var el = entry.target;
-            var width = el.dataset.width;
-            setTimeout(function () {
-              el.style.width = width + '%';
-            }, 200);
-            barObserver.unobserve(el);
-          }
-        });
-      }, { threshold: 0.3 });
-
-      allBars.forEach(function (el) { barObserver.observe(el); });
+      setInterval(updateTime, 30000);
     })();
   </script>
+
   <script src="script.js"></script>
 </body>
 </html>
