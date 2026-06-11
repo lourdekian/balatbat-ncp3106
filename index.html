@@ -723,7 +723,7 @@
         var phTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Manila' }));
         var hour = phTime.getHours();
         var day = phTime.getDay();
-        var isAvailable = hour >= 7 && hour < 22 && day >= 1 && day <= 5;
+        var isAvailable = hour >= 22 && hour < 7 && day >= 1 && day <= 5;
 
         if (statusDot && statusText) {
           if (isAvailable) {
