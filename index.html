@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kobe Christian Balatbat | Virtual Assistant</title>
+  <meta name="description" content="Kobe Christian Balatbat - Virtual Assistant who builds systems that work — managing operations with precision, speed, and zero drama so you can show up where it counts." />
+  <meta name="keywords" content="Mortgage Broker Associate, Loan File Management, Mortgage Application Processing, Kobe Christian Balatbat, Underwriting Support, CRM Pipeline Management, Remote Mortgage Operations" />
+  <meta property="og:title" content="Kobe Christian Balatbat | Virtual Assistant" />
+  <meta property="og:description" content="Behind every successful entrepreneur is a system that works. I'm the Virtual Assistant who builds it — precision, speed, and zero drama." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,100..900&family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <div id="progressBar" aria-hidden="true"></div>
+
+  <!-- ── NAVIGATION ── -->
+  <nav>
+    <a href="#home" class="nav-logo">Kobe Balatbat</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#competencies">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#services">Systems</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="themeToggle" aria-label="Toggle dark/light mode">+</button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#competencies" class="mobile-link">Skills</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#education" class="mobile-link">Education</a>
+    <a href="#languages" class="mobile-link">Languages</a>
+    <a href="#services" class="mobile-link">Systems</a>
+    <a href="#certifications" class="mobile-link">Certifications</a>
+    <a href="#projects" class="mobile-link">Work</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <main>
+    <!-- ══════════════════════
+         HERO
+         ══════════════════════ -->
+    <section id="home">
+      <div class="hero-index-num">001</div>
+      <div class="badge"><span class="heartbeat-icon">✦</span> Available for work</div>
+      <div class="hero-kicker">Mortgage Operations · Virtual Assistance · Systems Support</div>
+
+      <div class="avatar-wrap">
+        <img
+          id="heroImage"
+          src="kobe-profile-avatar.jpg"
+          alt="Kobe Christian Balatbat"
+          width="900"
+          height="900"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="avatar-fallback" id="heroFallback" style="display:none;">
+          <span>KB</span>
+        </div>
+      </div>
+
+      <h1 class="hero-wordmark">
+        <span>Kobe</span>
+        <span>Christian</span>
+        <span class="typed-wrap">
+          <span id="typed-name"></span>
+        </span>
+      </h1>
+
+      <p class="hero-sub">
+        Behind every successful entrepreneur is a system that works.
+        I'm the <strong>Virtual Assistant who builds it</strong> — managing your operations
+        with precision, speed, and zero drama, so you can show up where it counts.
+      </p>
+
+      <div class="hero-proof" aria-label="Portfolio highlights">
+        <div><span>50+</span> Active Files</div>
+        <div><span>99%+</span> Data Accuracy</div>
+        <div><span>20+</span> Monthly Applications</div>
+        <div><span>Remote</span> PHT Based</div>
+      </div>
+
+      <div class="cta-row">
+        <a href="https://www.linkedin.com/in/kobechristian/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          LinkedIn ↗
+        </a>
+        <a href="https://www.onlinejobs.ph/jobseekers/info/4976526" target="_blank" rel="noopener noreferrer" class="btn btn-olj">
+          OnlineJobs.ph ↗
+        </a>
+        <a href="https://ph.jobstreet.com/profiles/kobechristian-balatbat-6kPTY9S5jl" target="_blank" rel="noopener noreferrer" class="btn btn-jobstreet">
+          JobStreet ↗
+        </a>
+        <a href="https://calendly.com/kobebalatbat-va/30min" target="_blank" rel="noopener noreferrer" class="btn btn-calendly">
+          Book a Call ↗
+        </a>
+        <a href="Balatbat.resume.pdf" download class="btn btn-cv">
+          Download CV ↓
+        </a>
+      </div>
+
+      <!-- Timezone Widget -->
+      <div class="timezone-widget">
+        <div>
+          <div class="timezone-label">Philippines (PHT)</div>
+          <div class="timezone-clock">
+            <span id="liveTime">--:-- --</span>
+          </div>
+        </div>
+        <div class="availability-status">
+          <span class="status-dot" id="statusDot"></span>
+          <span class="status-text" id="statusText">Available</span>
+        </div>
+      </div>
+
+      <div class="hero-scroll-line" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line-track"><div class="scroll-line-fill"></div></div>
+      </div>
+    </section>
+
+    <div class="specimen-strip" aria-hidden="true">
+      <div class="specimen-track">
+        <span>Mortgage Ops</span>
+        <span>Loan Files</span>
+        <span>CRM Pipelines</span>
+        <span>Compliance</span>
+        <span>Automation</span>
+        <span>Remote Support</span>
+        <span>Mortgage Ops</span>
+        <span>Loan Files</span>
+        <span>CRM Pipelines</span>
+        <span>Compliance</span>
+        <span>Automation</span>
+        <span>Remote Support</span>
+      </div>
+    </div>
+
+    <!-- ══════════════════════
+         ABOUT
+         ══════════════════════ -->
+    <section id="about">
+      <div class="section-inner about-grid">
+        <div class="about-text">
+          <div class="section-header">
+            <span class="section-index">002</span>
+            <p class="section-label reveal">Who I am</p>
+          </div>
+          <h2 class="section-title reveal">About</h2>
+          <div class="divider reveal"></div>
+
+          <p class="reveal">
+            I'm <strong>Kobe Christian Balatbat</strong> — a <strong>Mortgage Broker Associate</strong> with
+            hands-on experience supporting Australian end-to-end mortgage application processing, loan origination,
+            borrower document collection, underwriting support, and loan file management.
+          </p>
+          <p class="reveal">
+            I manage <strong>50+ concurrent loan files</strong> across different CRM platforms, maintaining
+            99%+ data accuracy and full compliance with documentation requirements, ensuring every file is
+            audit-ready at every stage, from application intake through to closing.
+          </p>
+          <p class="reveal">
+            My expertise covers the full mortgage lifecycle: <strong>income verification, credit documentation
+            review, pre-approval support, underwriting coordination, funding, and closing</strong> — handling
+            sensitive financial data for 100+ borrowers with absolute precision and confidentiality.
+          </p>
+          <p class="reveal">
+            My BS Computer Engineering background means I don't just execute — I systematically improve. I've
+            identified workflow inefficiencies, optimized Salesforce processes, and built systems that reduce
+            processing errors and increase operational efficiency across the entire pipeline.
+            <strong>Precision, speed, and zero drama</strong> — that's the standard.
+          </p>
+
+          <div class="stats-row">
+            <div class="stat-item reveal">
+              <div class="stat-num-wrap">
+                <span class="stat-num" data-target="1">0</span>
+                <span class="stat-suffix">+</span>
+              </div>
+              <div class="stat-label">Year Experience</div>
+            </div>
+            <div class="stat-item reveal">
+              <div class="stat-num-wrap">
+                <span class="stat-num" data-target="15">0</span>
+                <span class="stat-suffix">+</span>
+              </div>
+              <div class="stat-label">Tools Mastered</div>
+            </div>
+            <div class="stat-item reveal">
+              <div class="stat-num-wrap">
+                <span class="stat-num" data-target="6">0</span>
+                <span class="stat-suffix">+</span>
+              </div>
+              <div class="stat-label">Services Offered</div>
+            </div>
+            <div class="stat-item reveal">
+              <div class="stat-num-wrap">
+                <span class="stat-num" data-target="100">0</span>
+                <span class="stat-suffix">%</span>
+              </div>
+              <div class="stat-label">Remote-Ready</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image-wrap reveal">
+          <img
+            id="aboutImage"
+            src="about.jpg"
+            alt="Kobe Christian Balatbat — About"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         CORE COMPETENCIES
+         ══════════════════════ -->
+    <section id="competencies">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-index">003</span>
+          <p class="section-label reveal">What I bring</p>
+        </div>
+        <h2 class="section-title reveal">Core<br/>Competencies</h2>
+        <div class="divider reveal"></div>
+
+        <div class="competency-grid">
+          <div class="competency-card reveal">
+            <span class="competency-num">01</span>
+            <div class="competency-title">Mortgage Application Processing</div>
+            <p class="competency-desc">End-to-end loan origination and mortgage application processing — moving 20+ applications per month from intake through to closing.</p>
+          </div>
+          <div class="competency-card reveal">
+            <span class="competency-num">02</span>
+            <div class="competency-title">Loan File Management</div>
+            <p class="competency-desc">Managing 50+ concurrent borrower files and 100+ loan records across different CRM platforms with 99%+ data accuracy.</p>
+          </div>
+          <div class="competency-card reveal">
+            <span class="competency-num">03</span>
+            <div class="competency-title">Borrower Documentation & Verification</div>
+            <p class="competency-desc">Collecting, reviewing, and organizing borrower documents, income verification records, and credit documentation for underwriting.</p>
+          </div>
+          <div class="competency-card reveal">
+            <span class="competency-num">04</span>
+            <div class="competency-title">Underwriting & Pre-Approval Support</div>
+            <p class="competency-desc">Preparing submission-ready packages for underwriting, supporting pre-approval, funding coordination, and closing activities.</p>
+          </div>
+          <div class="competency-card reveal">
+            <span class="competency-num">05</span>
+            <div class="competency-title">Pipeline & CRM Coordination</div>
+            <p class="competency-desc">Multi-pipeline management across 5+ loan officer pipelines — scheduling, follow-ups, and status updates ensuring smooth file progression.</p>
+          </div>
+          <div class="competency-card reveal">
+            <span class="competency-num">06</span>
+            <div class="competency-title">Compliance & Workflow Optimization</div>
+            <p class="competency-desc">Compliance reporting, Automation process optimization, and workflow improvements that reduce processing errors and increase efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         EXPERIENCE
+         ══════════════════════ -->
+    <section id="experience">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-index">004</span>
+          <p class="section-label reveal">Work history</p>
+        </div>
+        <h2 class="section-title reveal">Experience</h2>
+        <div class="divider reveal"></div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="exp-header">
+                <h3 class="exp-title">Professional Development</h3>
+                <span class="exp-duration">Dec 2025 — May 2026</span>
+              </div>
+              <p class="exp-company">Career Break · Upskilling &amp; Project Building</p>
+              <ul class="exp-bullets">
+                <li>After my previous role ended, I used this period intentionally to invest in professional growth, strengthen my technical skills, and prepare for my next opportunity.</li>
+                <li>I focused on learning automation tools and building workflow-focused projects, including an automated Google Sheets pipeline tracker and a custom task tracker designed to improve organization and efficiency.</li>
+                <li>I also explored different CRM systems and business platforms to broaden my operational knowledge and better understand how teams manage pipelines, tasks, client data, and day-to-day processes.</li>
+                <li>This was a productive development period that helped me sharpen my problem-solving mindset, expand my toolset, and become more confident in creating systems that support smoother, more efficient work.</li>
+              </ul>
+              <div class="exp-tools">
+                <span class="exp-tool">Automation Tools</span>
+                <span class="exp-tool">Google Sheets</span>
+                <span class="exp-tool">Task Tracking</span>
+                <span class="exp-tool">CRM Platforms</span>
+                <span class="exp-tool">Workflow Optimization</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="exp-header">
+                <h3 class="exp-title">Mortgage Broker Associate</h3>
+                <span class="exp-duration">Aug 2024 — Nov 2025</span>
+              </div>
+              <p class="exp-company">AU-Based Real Estate &amp; Mortgage Brokerage · Remote</p>
+              <ul class="exp-bullets">
+                <li>At any given time, I was juggling 50+ active borrower files — tracking each one from the first application all the way through closing. Using Quickli, GoHighLevel, AOL and MyCRM, I kept everything organized and accurate, maintaining a 99%+ data accuracy rate while making sure nothing slipped through the cracks.</li>
+                <li>I took ownership of 100+ borrower records, loan files, and closing documents, making sure every file in Microsoft 365 and Google Workspace was clean, current, and ready for review at a moment's notice.</li>
+                <li>Every month, I helped move 20+ mortgage applications forward — collecting borrower documents, verifying income records, and preparing materials for underwriting so loan officers could focus on what they do best.</li>
+                <li>I became the go-to person across 5+ loan officer pipelines for keeping communication flowing. From scheduling appointments to sending follow-ups and status updates, I made sure borrowers always felt supported and informed.</li>
+                <li>I was involved in every stage of the loan process — pre-approval, underwriting, funding, and closing. Throughout all of it, I handled sensitive financial information for 100+ borrowers with full confidentiality and care.</li>
+                <li>I noticed where our CRM workflows were slowing things down and took initiative to fix them. The result was better pipeline visibility for the whole team and fewer delays across the board.</li>
+                <li>Managing a pipeline of 50+ active applications wasn't always easy, but I consistently kept files on track, met service-level targets, and made sure every borrower's journey from intake to close went as smoothly as possible.</li>
+              </ul>
+              <div class="exp-tools">
+                <span class="exp-tool">Quickli</span>
+                <span class="exp-tool">GoHighLevel</span>
+                <span class="exp-tool">AOL</span>
+                <span class="exp-tool">MyCRM</span>
+                <span class="exp-tool">Microsoft 365</span>
+                <span class="exp-tool">Google Workspace</span>
+                <span class="exp-tool">DocuSign</span>
+                <span class="exp-tool">Adobe PDF Editor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         EDUCATION
+         ══════════════════════ -->
+    <section id="education">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-index">005</span>
+          <p class="section-label reveal">Academic background</p>
+        </div>
+        <h2 class="section-title reveal">Education</h2>
+        <div class="divider reveal"></div>
+
+        <div class="edu-grid">
+          <div class="edu-card reveal">
+            <div class="edu-degree">BS Computer Engineering</div>
+            <div class="edu-school">University of the East — Recto, Manila</div>
+            <div class="edu-year">Graduated May 2025</div>
+          </div>
+          <div class="edu-card reveal">
+            <div class="edu-degree">Senior High School — STEM</div>
+            <div class="edu-school">STI College Cubao — Cubao, Quezon City</div>
+            <div class="edu-year">Aug 2018 – Jun 2020</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         LANGUAGES
+         ══════════════════════ -->
+    <section id="languages">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-index">006</span>
+          <p class="section-label reveal">Communication</p>
+        </div>
+        <h2 class="section-title reveal">Languages</h2>
+        <div class="divider reveal"></div>
+
+        <div class="languages-grid">
+          <div class="language-card reveal">
+            <div class="language-name">English</div>
+            <div class="language-level">Fluent / Professional</div>
+            <div class="language-bar-track">
+              <div class="language-bar-fill" data-width="95"></div>
+            </div>
+          </div>
+          <div class="language-card reveal">
+            <div class="language-name">Filipino (Tagalog)</div>
+            <div class="language-level">Native</div>
+            <div class="language-bar-track">
+              <div class="language-bar-fill" data-width="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         SERVICES
+         ══════════════════════ -->
+    <section id="services">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-index">007</span>
+          <p class="section-label reveal">What I do</p>
+        </div>
+        <h2 class="section-title reveal">Services</h2>
+        <div class="divider reveal"></div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <span class="service-num">01</span>
+            <h3>Loan File & Compliance Management</h3>
+            <p>I organize borrower documents, track conditional approvals, and ensure every file meets lender and regulatory standards — end to end. Strict confidentiality is maintained across all borrower records, so your operations stay clean, compliant, and audit-ready.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-num">02</span>
+            <h3>CRM & Workflow Optimization</h3>
+            <p>Fluent in Salesforce, Velocity, HubSpot, Zoho, GoHighLevel, MyCRM, and Quickli. I build automated workflows that cut down on manual tasks, reduce errors, and sharpen broker efficiency — so your team spends less time on admin and more time closing deals.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-num">03</span>
+            <h3>Data Analysis & Reporting</h3>
+            <p>I assess borrowing capacity, loan suitability, and pipeline performance with precision. Using Python or JavaScript, I create dashboards and scripts that turn raw loan data into clear, actionable metrics — so you always know exactly where your pipeline stands.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-num">04</span>
+            <h3>Client & Lender Communication</h3>
+            <p>I handle borrower inquiries, coordinate status updates, and liaise directly with lenders to keep every deal on track. Proactive communication means fewer surprises, faster responses, and deals that don't stall waiting for a reply.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-num">05</span>
+            <h3>Process Automation & Technical Support</h3>
+            <p>Using Zapier, Google Apps Script, and AI tooling, I automate the repetitive admin tasks draining your team's time. I also troubleshoot CRM integrations and keep systems running reliably — so your tech stack works for you, not against you.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-num">06</span>
+            <h3>Technical Documentation & Systems Engineering</h3>
+            <p>I draft SOPs, compliance guides, and workflow documentation your team can actually follow. Applying an engineering mindset, I identify operational bottlenecks and redesign processes to eliminate friction — built to scale as your business grows.</p>
+          </div>
+        </div>
+
+        <!-- Tools Stack -->
+        <div class="tools-grid reveal">
+          <div class="tools-group">
+            <div class="tools-group-label">CRM &amp; Mortgage Platforms</div>
+            <div class="tools-tags">
+              <span class="tools-tag">Velocity</span>
+              <span class="tools-tag">Salesforce</span>
+              <span class="tools-tag">HubSpot</span>
+              <span class="tools-tag">GoHighLevel</span>
+              <span class="tools-tag">Zoho CRM</span>
+              <span class="tools-tag">MyCRM</span>
+              <span class="tools-tag">Quickli</span>
+            </div>
+          </div>
+          <div class="tools-group">
+            <div class="tools-group-label">Automation &amp; AI</div>
+            <div class="tools-tags">
+              <span class="tools-tag">Zapier</span>
+              <span class="tools-tag">Make</span>
+              <span class="tools-tag">n8n</span>
+              <span class="tools-tag">Google Apps Script</span>
+              <span class="tools-tag">ChatGPT / AI Tools</span>
+            </div>
+          </div>
+          <div class="tools-group">
+            <div class="tools-group-label">Data &amp; Dev</div>
+            <div class="tools-tags">
+              <span class="tools-tag">Python</span>
+              <span class="tools-tag">JavaScript</span>
+              <span class="tools-tag">Excel · Sheets</span>
+              <span class="tools-tag">Notion</span>
+              <span class="tools-tag">Adobe PDF</span>
+            </div>
+          </div>
+          <div class="tools-group">
+            <div class="tools-group-label">Productivity &amp; Comms</div>
+            <div class="tools-tags">
+              <span class="tools-tag">Microsoft 365</span>
+              <span class="tools-tag">Google Workspace</span>
+              <span class="tools-tag">Slack</span>
+              <span class="tools-tag">Zoom</span>
+              <span class="tools-tag">Asana</span>
+              <span class="tools-tag">Trello</span>
+              <span class="tools-tag">Xero</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Bars -->
+        <div class="skill-bars reveal">
+          <div class="skill-bars-title">Proficiency Levels</div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Loan File & Compliance Management</span>
+              <span class="skill-bar-percent">95%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="95"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">CRM & Workflow Optimization</span>
+              <span class="skill-bar-percent">97%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="97"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Data Analysis & Reporting</span>
+              <span class="skill-bar-percent">88%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="88"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Client & Lender Communication</span>
+              <span class="skill-bar-percent">96%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="96"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Process Automation & Technical Support</span>
+              <span class="skill-bar-percent">97%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="97"></div>
+            </div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header">
+              <span class="skill-bar-name">Technical Documentation & Systems Engineering</span>
+              <span class="skill-bar-percent">95%</span>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" data-width="95"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         CERTIFICATIONS
+         ══════════════════════ -->
+    <section id="certifications">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-index">008</span>
+          <p class="section-label reveal">Credentials</p>
+        </div>
+        <h2 class="section-title reveal">Certifications</h2>
+        <div class="divider reveal"></div>
+
+        <div class="cert-list">
+          <div class="cert-item reveal">
+            <span class="cert-name">Prime Career Certification</span>
+            <span class="cert-year">2025</span>
+          </div>
+          <div class="cert-item reveal">
+            <span class="cert-name">Scrum Foundation Certification — Self-Paced</span>
+            <span class="cert-year">2024</span>
+          </div>
+          <div class="cert-item reveal">
+            <span class="cert-name">Life Talk: Living Wisely</span>
+            <span class="cert-year">2022</span>
+          </div>
+          <div class="cert-item reveal">
+            <span class="cert-name">Arduino for Beginners</span>
+            <span class="cert-year">2021</span>
+          </div>
+          <div class="cert-item reveal">
+            <span class="cert-name">Good Governance: Of the People, By the People, For the People</span>
+            <span class="cert-year">2021</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         PROJECTS
+         ══════════════════════ -->
+    <section id="projects">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-index">009</span>
+          <p class="section-label reveal">My Work</p>
+        </div>
+        <h2 class="section-title reveal">Selected<br/>Projects</h2>
+        <div class="divider reveal"></div>
+
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-image-wrap">
+              <img src="project1.png" alt="Kobe's Attention Board" class="project-image"
+                   onerror="this.parentElement.style.display='none';" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Kobe's Attention Board</h3>
+              <p class="project-desc">A personalized productivity command center. I built this to manage tasks, track streaks, and visualize workflow activity.</p>
+              <div class="project-tools">
+                <span class="project-tool">Task Tracking</span>
+                <span class="project-tool">Data Visualization</span>
+                <span class="project-tool">Workflow Automation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-image-wrap">
+              <img src="project2.png" alt="Property Management Bookkeeping" class="project-image"
+                   onerror="this.parentElement.style.display='none';" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Property Management Bookkeeping</h3>
+              <p class="project-desc">An automated system for tracking real estate assets. Streamlines property data, rent rolls, income, and expense logging.</p>
+              <div class="project-tools">
+                <span class="project-tool">Bookkeeping</span>
+                <span class="project-tool">Real Estate Ops</span>
+                <span class="project-tool">Data Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         CONTACT
+         ══════════════════════ -->
+    <section id="contact">
+      <div class="section-inner" style="max-width: 640px;">
+        <div class="section-header">
+          <span class="section-index">010</span>
+          <p class="section-label reveal">Let's connect</p>
+        </div>
+        <h2 class="section-title reveal">Contact</h2>
+        <div class="divider reveal"></div>
+
+        <p class="reveal" style="font-size:0.95rem; line-height:1.75; margin-bottom: 2.5rem;">
+          Interested in working together? Reach out through any of the channels below and I'll get back to you as soon as possible.
+        </p>
+
+        <div class="contact-group-label reveal">Professional Profiles</div>
+
+        <div class="profile-logo-grid reveal" aria-label="Professional profile links">
+          <a href="https://www.linkedin.com/in/kobechristian/" target="_blank" rel="noopener noreferrer" class="profile-logo profile-linkedin" aria-label="Open LinkedIn profile" data-tooltip="LinkedIn">
+            <img src="linkedin-logo.png" alt="" class="linkedin-logo-img" loading="lazy" decoding="async" />
+            <span class="sr-only">LinkedIn</span>
+          </a>
+          <a href="https://www.onlinejobs.ph/jobseekers/info/4976526" target="_blank" rel="noopener noreferrer" class="profile-logo profile-olj" aria-label="Open OnlineJobs.ph profile" data-tooltip="OnlineJobs.ph">
+            <img src="onlinejobs-logo.jpeg" alt="" class="onlinejobs-logo-img" loading="lazy" decoding="async" />
+            <span class="sr-only">OnlineJobs.ph</span>
+          </a>
+          <a href="https://ph.jobstreet.com/profiles/kobechristian-balatbat-6kPTY9S5jl" target="_blank" rel="noopener noreferrer" class="profile-logo profile-jobstreet" aria-label="Open JobStreet profile" data-tooltip="JobStreet">
+            <img src="jobstreet-logo.png" alt="" class="jobstreet-logo-img" loading="lazy" decoding="async" />
+            <span class="sr-only">JobStreet</span>
+          </a>
+        </div>
+
+        <div class="contact-group-label reveal" style="margin-top:1.5rem;">Direct Contact</div>
+
+        <a href="tel:+639214055369" class="contact-detail reveal" style="text-decoration:none; color:inherit;">
+          <div>
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.5;margin-bottom:0.15rem;">Phone</div>
+            <div style="font-size:0.9rem;">+63 921 405 5369</div>
+          </div>
+        </a>
+
+        <div class="contact-detail reveal">
+          <div>
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.5;margin-bottom:0.15rem;">Location</div>
+            <div style="font-size:0.9rem;">Quezon City, Philippines</div>
+          </div>
+        </div>
+
+        <a href="mailto:kobebalatbat.va@gmail.com" class="contact-detail reveal" style="text-decoration:none; color:inherit;">
+          <div>
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.5;margin-bottom:0.15rem;">Email</div>
+            <div style="font-size:0.9rem;">kobebalatbat.va@gmail.com</div>
+          </div>
+        </a>
+
+        <div class="contact-group-label reveal" style="margin-top:1.5rem;">Schedule a Meeting</div>
+        <a href="https://calendly.com/kobebalatbat-va/30min" target="_blank" rel="noopener noreferrer" class="calendly-cta-block reveal">
+          <div class="calendly-cta-inner">
+            <div class="calendly-cta-left">
+              <div>
+                <div class="calendly-cta-title">Book a Free 30-Min Call</div>
+                <div class="calendly-cta-sub">Let's talk about how I can support your business</div>
+              </div>
+            </div>
+            <div class="calendly-cta-arrow">↗</div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-big">Kobe<br/>Balatbat</div>
+      <div class="footer-meta">
+        <p>© 2026 <a href="#home">Kobe Christian Balatbat</a>. All rights reserved.</p>
+        <p>Built with care · Virtual Assistant · Philippines</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script>
+    /* ── Typed.js ── */
+    (function () {
+      var typedTarget = document.getElementById('typed-name');
+      if (!typedTarget) return;
+
+      if (window.Typed) {
+        new Typed('#typed-name', {
+          strings: ['Balatbat.'],
+          typeSpeed: 44,
+          backSpeed: 0,
+          backDelay: 0,
+          loop: false,
+          smartBackspace: true
+        });
+      } else {
+        typedTarget.textContent = 'Balatbat.';
+      }
+    })();
+
+    /* ── Live Clock ── */
+    (function () {
+      var timeEl = document.getElementById('liveTime');
+      var statusDot = document.getElementById('statusDot');
+      var statusText = document.getElementById('statusText');
+
+      function updateTime() {
+        var now = new Date();
+        var timeStr = now.toLocaleTimeString('en-US', {
+          timeZone: 'Asia/Manila',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true
+        });
+        if (timeEl) timeEl.textContent = timeStr;
+
+        var phTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Manila' }));
+        var hour = phTime.getHours();
+        var day = phTime.getDay();
+        var isAvailable = (hour >= 22 || hour < 7) && day >= 1 && day <= 5;
+
+        if (statusDot && statusText) {
+          if (isAvailable) {
+            statusDot.classList.remove('offline');
+            statusText.classList.remove('offline');
+            statusText.textContent = 'Available Now';
+          } else {
+            statusDot.classList.add('offline');
+            statusText.classList.add('offline');
+            statusText.textContent = 'Back Soon';
+          }
+        }
+      }
+
+      updateTime();
+      setInterval(updateTime, 30000);
+    })();
+  </script>
+
+  <script src="script.js?v=grotesk-zero"></script>
+</body>
+</html>
